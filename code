@@ -1,0 +1,21 @@
+function convertToRoman(num) {
+     let arabNum = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+     let romNum = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+     let answer = [];
+     let total = num;
+
+     for (let i = 0; i <= arabNum.length; i++){
+     while (arabNum[i] <= total){
+        total -= arabNum[i];
+        answer.push(romNum[i])
+        }    
+
+     }
+   
+ 
+ let result =answer.join("");
+ return result.toString();
+ 
+}
+
+convertToRoman(437)
